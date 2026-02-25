@@ -1,6 +1,3 @@
-function shuffle(a) {
-  return [...a].sort(() => Math.random() - 0.5);
-}
 function rnd(lo, hi) {
   return Math.floor(Math.random() * (hi - lo + 1)) + lo;
 }

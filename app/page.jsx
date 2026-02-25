@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { shuffle } from "../utils";
+import { shuffle } from "../utils/shuffle";
 import SetupScreen from "../components/screen/setup";
 import CampaignScreen from "../components/screen/campign";
 import PolicyScreen from "../components/screen/policy";

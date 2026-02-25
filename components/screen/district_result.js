@@ -28,7 +28,7 @@ export default function DistrictResultScreen({
           ticker={`RESULT: ${winner.name} (${winner.party.short}) wins ${district} with ${winner.votes.toLocaleString()} votes · Policy debate credited for ${playerWon ? "securing" : "narrowing"} the vote`}
         />
         <div
-          style={{ maxWidth: 560, margin: "0 auto", padding: "18px 16px" }}
+          style={{ maxWidth: 720, margin: "0 auto", padding: "18px 16px" }}
           className="fade-in"
         >
           <div style={{ textAlign: "center", marginBottom: 14 }}>

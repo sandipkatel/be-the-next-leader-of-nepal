@@ -7,7 +7,7 @@ export default function Masthead({ sub, ticker }) {
   return (
     <>
       <div className="edition-bar">
-        <span>NEPAL PARLIAMENTARY ELECTION · 2081 B.S.</span>
+        <span>NEPAL PARLIAMENTARY ELECTION · 2082 B.S.</span>
         <span>{today}</span>
         <span>निःशुल्क</span>
       </div>
@@ -24,16 +24,16 @@ export default function Masthead({ sub, ticker }) {
         >
           The
         </div>
-        <div className="mast-title">Janata Patrika</div>
+        <div className="mast-title">Shree Patrika</div>
         <div className="mast-sub">
-          जनता पत्रिका · Voice of the People · Nepal's Election Chronicle
+          श्री पत्रिका · Voice of the People · Nepal's Election Chronicle
         </div>
       </div>
       {sub && <div className="sub-bar">{sub}</div>}
       {ticker && (
         <div className="ticker">
           <span className="ticker-inner">
-            &nbsp;&nbsp;⬛ LIVE 2081 &nbsp;·&nbsp; {ticker} &nbsp;·&nbsp; JANATA
+            &nbsp;&nbsp;⬛ LIVE 2082 &nbsp;·&nbsp; {ticker} &nbsp;·&nbsp; JANATA
             PATRIKA — NEPAL'S ELECTION VOICE &nbsp;·&nbsp; निर्वाचन आयोग नेपाल
             &nbsp;·&nbsp; ⬛&nbsp;&nbsp;
           </span>

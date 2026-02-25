@@ -16,7 +16,7 @@ export default function CampaignScreen({
           ticker={`${name} of ${party.short} campaigns in ${district} · Voters demand answers on ${issues[0]} · Rivals mobilise`}
         />
         <div
-          style={{ maxWidth: 580, margin: "0 auto", padding: "18px 16px" }}
+          style={{ maxWidth: 720, margin: "0 auto", padding: "18px 16px" }}
           className="fade-in"
         >
           <div style={{ display: "flex", gap: 8, marginBottom: 14 }}>
@@ -158,7 +158,7 @@ export default function CampaignScreen({
                       textTransform: "uppercase",
                     }}
                   >
-                    {op.party.short} · {op.party.ideology}
+                    {op.party.short}
                   </div>
                 </div>
               </div>

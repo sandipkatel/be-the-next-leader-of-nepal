@@ -60,7 +60,7 @@ export default function CountingScreen({
               { playerVotes, opponentVotes, totalVotes, pct: playerPct },
               allResults,
             ),
-          1200,
+          3000,
         );
       }
     }, 55);
@@ -78,7 +78,7 @@ export default function CountingScreen({
           ticker={`${district} counting underway · ${counted.toLocaleString()} votes tallied · Party agents tense · Policy debate echoes in counting room`}
         />
         <div
-          style={{ maxWidth: 560, margin: "0 auto", padding: "18px 16px" }}
+          style={{ maxWidth: 720, margin: "0 auto", padding: "18px 16px" }}
           className="fade-in"
         >
           <div

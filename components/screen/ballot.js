@@ -29,7 +29,7 @@ export default function BallotScreen({ setup, opponents, onVote }) {
           ticker={`Polling stations open across ${district} · Long queues reported · ${name} awaits results · ${NARRATOR.ballotDay(district).slice(0, 70)}…`}
         />
         <div
-          style={{ maxWidth: 520, margin: "0 auto", padding: "18px 16px" }}
+          style={{ maxWidth: 720, margin: "0 auto", padding: "18px 16px" }}
           className="fade-in"
         >
           <div style={{ textAlign: "center", marginBottom: 14 }}>
@@ -59,7 +59,7 @@ export default function BallotScreen({ setup, opponents, onVote }) {
                 color: "#694818",
               }}
             >
-              {district} Parliamentary Constituency · 2081 B.S.
+              {district} Parliamentary Constituency · 2082 B.S.
             </div>
           </div>
           <div className="ballot-box">
@@ -141,7 +141,6 @@ export default function BallotScreen({ setup, opponents, onVote }) {
                     flexShrink: 0,
                   }}
                 >
-                  {c.party.ideology}
                   {c.isSelf && (
                     <div style={{ color: "#0d2860", marginTop: 2 }}>
                       PM: {c.party.pm.split(" ").slice(-1)}

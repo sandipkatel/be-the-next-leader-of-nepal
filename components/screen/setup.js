@@ -14,11 +14,11 @@ export default function SetupScreen({ onStart }) {
       <div className="z1">
         <Masthead sub="Candidate Registration · उम्मेदवार दर्ता" />
         <div
-          style={{ maxWidth: 520, margin: "0 auto", padding: "20px 16px" }}
+          style={{ maxWidth: 720, margin: "0 auto", padding: "20px 16px" }}
           className="fade-in"
         >
           <div style={{ display: "flex", gap: 8, marginBottom: 16 }}>
-            <div className="stamp stamp-in">Election 2081</div>
+            <div className="stamp stamp-in">Election 2082</div>
             <div
               className="stamp stamp-b stamp-in"
               style={{ animationDelay: ".1s" }}
@@ -45,12 +45,12 @@ export default function SetupScreen({ onStart }) {
               </span>
             </div>
             <div className="byline">
-              Parliamentary Election Simulation · Nepal 2081
+              Parliamentary Election Simulation · Nepal 2082
             </div>
             <div className="body">
               You are a candidate contesting Nepal's federal parliament. Win
               your district through smart policy-making. Help your party cross
-              83 seats. Watch your PM take oath at Singha Durbar.
+              138 seats. Watch your PM take oath at Singha Durbar.
             </div>
           </div>
           <div
@@ -63,8 +63,8 @@ export default function SetupScreen({ onStart }) {
             }}
           >
             {[
-              ["165", "Total Seats"],
-              ["83", "Majority Mark"],
+              ["275", "Total Seats"],
+              ["138", "Majority Mark"],
               ["3", "Policy Rounds"],
               ["5", "Voters Judge"],
             ].map(([n, l], i) => (
@@ -111,9 +111,10 @@ export default function SetupScreen({ onStart }) {
                   color: "#694818",
                   textTransform: "uppercase",
                   marginBottom: 8,
+                  
                 }}
               >
-                Your Full Name
+                <strong>Your Full Name</strong>
               </div>
               <input
                 type="text"
@@ -170,7 +171,7 @@ export default function SetupScreen({ onStart }) {
               >
                 {PARTIES.map((p) => (
                   <option key={p.id} value={p.id}>
-                    {p.symbol} {p.name} ({p.short}) · {p.ideology}
+                    {p.symbol} {p.name} ({p.short})
                   </option>
                 ))}
               </select>
@@ -210,9 +211,9 @@ export default function SetupScreen({ onStart }) {
                 }}
               >
                 {[
-                  ["easy", "Sarala", "Easier win odds"],
-                  ["medium", "Madhyam", "Balanced race"],
-                  ["hard", "Kathin", "Tight margins"],
+                  ["easy", "सरल", "Easier win odds"],
+                  ["medium", "मध्यम", "Balanced race"],
+                  ["hard", "जटिल", "Tight margins"],
                 ].map(([d, np, desc], i) => (
                   <div
                     key={d}

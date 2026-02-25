@@ -38,8 +38,8 @@ export function policyScoreToVotePct(
 }
 
 export function simulateNationalSeats(party, playerWon, difficulty) {
-  const total = 165;
-  const majority = 83;
+  const total = 275;
+  const majority = 138;
   const others = PARTIES.filter((p) => p.id !== party.id);
   const ranges = { easy: [78, 108], medium: [62, 98], hard: [46, 84] };
   const [lo, hi] = ranges[difficulty];

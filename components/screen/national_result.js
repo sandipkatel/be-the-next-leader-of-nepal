@@ -15,7 +15,7 @@ export default function NationalResultScreen({
     simulateNationalSeats(party, playerWon, setup.difficulty),
   );
   const [revealed, setRevealed] = useState(false);
-  const majority = 83;
+  const majority = 138;
   const playerSeats = seats[party.id];
   const partyWon = playerSeats >= majority;
   const otherParties = PARTIES.filter((p) => p.id !== party.id).sort(
@@ -39,11 +39,11 @@ export default function NationalResultScreen({
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
       <div className="z1">
         <Masthead
-          sub="National Results — Nepal Parliamentary Election 2081"
+          sub="National Results — Nepal Parliamentary Election 2082"
           ticker={`BREAKING · ${party.short} wins ${playerSeats} seats · Majority mark: ${majority} · ${partyWon ? "MAJORITY SECURED — " + party.pm + " to be PM" : "HUNG PARLIAMENT — Coalition talks begin"} · ${name} ${playerWon ? "WON" : "LOST"} ${district}`}
         />
         <div
-          style={{ maxWidth: 600, margin: "0 auto", padding: "18px 16px" }}
+          style={{ maxWidth: 720, margin: "0 auto", padding: "18px 16px" }}
           className="fade-in"
         >
           <div style={{ textAlign: "center", marginBottom: 14 }}>
@@ -81,12 +81,12 @@ export default function NationalResultScreen({
                 : `${party.name} Falls Short — Coalition Needed`}
             </div>
             <div className="byline">
-              Special Edition · National Results · Janata Patrika
+              Special Edition · National Results · Shree Patrika
             </div>
             <div className="body">
               {partyWon
-                ? `${party.name} has secured ${playerSeats} seats in the 165-member parliament — crossing the 83-seat majority mark. ${party.pm} will be invited to form government. It is a historic mandate for the party.`
-                : `${party.name} has won ${playerSeats} seats, short of the 83 needed for a majority. Nepal faces a hung parliament. Coalition negotiations with ${biggestRival.name} (${seats[biggestRival.id]} seats) are expected to begin immediately.`}
+                ? `${party.name} has secured ${playerSeats} seats in the 275-member parliament — crossing the 138-seat majority mark. ${party.pm} will be invited to form government. It is a historic mandate for the party.`
+                : `${party.name} has won ${playerSeats} seats, short of the 138 needed for a majority. Nepal faces a hung parliament. Coalition negotiations with ${biggestRival.name} (${seats[biggestRival.id]} seats) are expected to begin immediately.`}
             </div>
           </div>
 
@@ -101,7 +101,7 @@ export default function NationalResultScreen({
                   textTransform: "uppercase",
                 }}
               >
-                Seat Count — 165 Constituencies
+                Seat Count — 275 Constituencies
               </div>
             </div>
             <div
@@ -138,7 +138,7 @@ export default function NationalResultScreen({
             </div>
             {[party, ...otherParties].map((p) => {
               const s = seats[p.id] || 0;
-              const barPct = Math.round((s / 165) * 100);
+              const barPct = Math.round((s / 275) * 100);
               const isP = p.id === party.id;
               return (
                 <div key={p.id} className="nat-row">
@@ -165,7 +165,7 @@ export default function NationalResultScreen({
                         textTransform: "uppercase",
                       }}
                     >
-                      {isP ? "★ Your Party" : p.ideology}
+                      {isP ? "★ Your Party" : "Opposition"}
                     </div>
                   </div>
                   <div className="sbar-track">
@@ -427,7 +427,7 @@ export default function NationalResultScreen({
               letterSpacing: 2,
             }}
           >
-            JANATA PATRIKA · जनता पत्रिका · ELECTION 2081 COVERAGE
+            SHREE PATRIKA · श्री पत्रिका · ELECTION 2082 COVERAGE
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import Masthead from "../ui/masthead";
-import { NARRATOR } from "../../data";
+import { NARRATOR } from "../../data/narrators";
 
 export default function CampaignScreen({
   setup,

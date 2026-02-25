@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Masthead from "../ui/masthead";
-import { PARTIES } from "../../data/narrators";
-import { simulateNationalSeats } from "../../logic";
+import { PARTIES } from "../../data/parties";
+import { simulateNationalSeats } from "../../helpers/logic";
 
 export default function NationalResultScreen({
   setup,

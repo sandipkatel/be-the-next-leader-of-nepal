@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Masthead from "../ui/masthead";
-import { PARTIES, DISTRICTS } from "../../data";
+import { PARTIES } from "../../data/parties";
+import { DISTRICTS } from "../../data/districts";
 
 export default function SetupScreen({ onStart }) {
   const [name, setName] = useState("");

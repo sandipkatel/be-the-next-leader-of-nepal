@@ -9,12 +9,10 @@ import BallotScreen from "../components/screen/ballot";
 import CountingScreen from "../components/screen/counting";
 import DistrictResultScreen from "../components/screen/district_result";
 import NationalResultScreen from "../components/screen/national_result";
-import {
-  PROBLEMS,
-  VOTER_TYPES,
-  OPPONENT_NAMES,
-  PARTIES,
-} from "../data/narrators";
+import { PROBLEMS } from "../data/problems";
+import { OPPONENT_NAMES } from "../data/opponents";
+import { PARTIES } from "../data/parties";
+import { VOTER_TYPES } from "../data/voters";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // SCREEN 3 — POLICY WRITING (3 rounds)

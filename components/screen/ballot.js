@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import Masthead from "../ui/masthead";
-import { NARRATOR } from "../../data";
-import { shuffle } from "../../utils";
+import { NARRATOR } from "../../data/narrators";
+import { shuffle } from "../../utils/shuffle";
 
 export default function BallotScreen({ setup, opponents, onVote }) {
   const { name, district, party } = setup;

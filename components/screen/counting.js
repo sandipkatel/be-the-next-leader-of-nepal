@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Masthead from "../ui/masthead";
-import { NARRATOR } from "../../data";
-import { rnd, policyScoreToVotePct } from "../../logic";
+import { NARRATOR } from "../../data/narrators";
+import { rnd, policyScoreToVotePct } from "../../helpers/logic";
 export default function CountingScreen({
   setup,
   opponents,

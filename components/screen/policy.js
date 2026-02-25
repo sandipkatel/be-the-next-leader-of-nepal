@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Masthead from "../ui/masthead";
 import TimerBar from "../ui/timerbar";
 import VoterCard from "../ui/votercard";
-import { scorePolicy } from "../../logic";
+import { scorePolicy } from "../../helpers/logic";
 
 export default function PolicyScreen({ setup, problems, voters, onComplete }) {
   const { name, district, party } = setup;

@@ -4,7 +4,7 @@ export const PARTIES = [
     name: "Rastriya Swatantra Party",
     short: "RSP",
     color: "#215df4",
-    symbol: "🔔",
+    symbol: "vote.svg",
     pm: "Balen Shah",
   },
   {
@@ -12,7 +12,7 @@ export const PARTIES = [
     name: "Nepali Congress",
     short: "NC",
     color: "#f4bfc3",
-    symbol: "🌳",
+    symbol: "vote.svg",
     pm: "Gagan Thapa",
   },
   {
@@ -20,7 +20,7 @@ export const PARTIES = [
     name: "CPN-UML",
     short: "UML",
     color: "#fefeff",
-    symbol: "☀️",
+    symbol: "vote.svg",
     pm: "KP Sharma Oli",
   },
   {
@@ -28,7 +28,7 @@ export const PARTIES = [
     name: "Nepal Communist Party",
     short: "NCP",
     color: "#b91c1c",
-    symbol: "⭐",
+    symbol: "vote.svg",
     pm: "Prachanda",
   },
   {
@@ -36,7 +36,7 @@ export const PARTIES = [
     name: "Ujyalo Nepal Party",
     short: "UNP",
     color: "#3ac005",
-    symbol: "💡",
+    symbol: "vote.svg",
     pm: "Kulman Ghising",
   },
 ];

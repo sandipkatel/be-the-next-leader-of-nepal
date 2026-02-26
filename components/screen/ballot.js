@@ -89,9 +89,11 @@ export default function BallotScreen({ setup, opponents, onVote }) {
                     <span style={{ color: "#f3e8c8", fontSize: 12 }}>●</span>
                   )}
                 </div>
-                <span style={{ fontSize: 22, flexShrink: 0 }}>
-                  {c.party.symbol}
-                </span>
+                 <img
+                  src={c.symbol}
+                  alt={c.short}
+                  style={{ width: 34, height: 34, objectFit: "contain" }}
+                />
                 <div style={{ flex: 1 }}>
                   <div
                     style={{

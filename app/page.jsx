@@ -21,7 +21,7 @@ export default function App() {
     problems: shuffle(PROBLEMS).slice(0, 3),
     voters: shuffle(VOTER_TYPES).slice(0, 5),
     opponents: shuffle(OPPONENT_NAMES)
-      .slice(0, 3)
+      .slice(0, 4)
       .map((n, i) => ({ name: n, party: PARTIES[(i + 1) % PARTIES.length] })),
     issues: shuffle([
       "road connectivity",

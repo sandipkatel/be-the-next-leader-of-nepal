@@ -135,9 +135,6 @@ export default function CountingScreen({
                     key={i}
                     style={{ display: "flex", alignItems: "center", gap: 10 }}
                   >
-                    <span style={{ fontSize: 18, flexShrink: 0 }}>
-                      {r.problem.emoji}
-                    </span>
                     <div style={{ flex: 1 }}>
                       <div
                         style={{

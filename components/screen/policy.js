@@ -129,9 +129,6 @@ export default function PolicyScreen({ setup, problems, voters, onComplete }) {
               <div
                 style={{ display: "flex", alignItems: "flex-start", gap: 12 }}
               >
-                <span style={{ fontSize: 38, lineHeight: 1, flexShrink: 0 }}>
-                  {problem.emoji}
-                </span>
                 <div>
                   <div
                     className="hl"

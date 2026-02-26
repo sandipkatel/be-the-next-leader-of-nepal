@@ -156,7 +156,7 @@ export default function CampaignScreen({
           </div>
           <div
             style={{
-              background: "#0d2860",
+              background: "#303b50fb",
               color: "#f3e8c8",
               padding: "14px 16px",
               marginBottom: 16,

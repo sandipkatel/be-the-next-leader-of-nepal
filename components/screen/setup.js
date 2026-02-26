@@ -66,7 +66,7 @@ export default function SetupScreen({ onStart }) {
               ["275", "Total Seats"],
               ["138", "Majority Mark"],
               ["3", "Policy Rounds"],
-              ["5", "Voters Judge"],
+              ["4", "Voters Judge"],
             ].map(([n, l], i) => (
               <div
                 key={i}

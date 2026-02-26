@@ -23,7 +23,7 @@ export default function VoterCard({ voter, score, revealed, pending }) {
       <div style={{ display: "flex", alignItems: "flex-start", gap: 8 }}>
         <span style={{ fontSize: 24, lineHeight: 1, flexShrink: 0 }}>
           {voter.emoji}
-        </span>
+        </span> 
         <div style={{ flex: 1 }}>
           <div
             style={{

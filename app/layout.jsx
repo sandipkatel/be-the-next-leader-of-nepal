@@ -23,8 +23,8 @@ export const metadata = {
     "Shree Patrika",
     "Nepal politics",
   ],
-  authors: [{ name: "Shree Patrika" }],
-  creator: "Shree Patrika",
+  authors: [{ name: "Sandip Katel" }],
+  creator: "Sandip Katel",
 
   icons: {
     icon: "/vote.png",
@@ -36,7 +36,7 @@ export const metadata = {
     title: "Shree Patrika — Nepal Election Simulation 2082",
     description:
       "Contest a parliamentary seat in Nepal's federal election. Write policies, win voters, and watch your party's PM take oath at Singha Durbar.",
-    url: "https://Shreepatrika.com",
+    url: "https://patrika.skatel.com,np",
     siteName: "Shree Patrika",
     images: [
       {

@@ -169,7 +169,7 @@ export default function NationalResultScreen({
                         textTransform: "uppercase",
                       }}
                     >
-                      {isP ? "★ Your Party" : "Opposition"}
+                      {isP ? "Your Party" : "Opposition"}
                     </div>
                   </div>
                   <div className="sbar-track">

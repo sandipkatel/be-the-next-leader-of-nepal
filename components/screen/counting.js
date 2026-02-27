@@ -201,7 +201,7 @@ export default function CountingScreen({
                     />
                     <span style={{ color: r.isSelf ? "#780e0e" : "#170d00" }}>
                       {r.name.split(" ")[0]}
-                      {r.isSelf ? " ★" : ""}
+                      {r.isSelf ? "You" : ""}
                     </span>
                   </div>
                   <div className="cbar-track">

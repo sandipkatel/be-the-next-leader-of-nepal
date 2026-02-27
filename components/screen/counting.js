@@ -60,10 +60,10 @@ export default function CountingScreen({
               { playerVotes, opponentVotes, totalVotes, pct: playerPct },
               allResults,
             ),
-          3000,
+          4000,
         );
       }
-    }, 55);
+    }, 250);
     return () => clearInterval(t);
   }, []);
 
@@ -104,8 +104,135 @@ export default function CountingScreen({
               specific — earns votes.
             </div>
           </div>
-          {/* Policy score summary */}
+
+          {/* Counting progress */}
           <div style={{ border: "1px solid #b8946a", marginBottom: 14 }}>
+            <div className="ink">
+              <div
+                style={{
+                  fontFamily: "'Special Elite',cursive",
+                  fontSize: 10,
+                  letterSpacing: 4,
+                  textTransform: "uppercase",
+                }}
+              >
+                Ballot Count Progress
+              </div>
+            </div>
+            <div style={{ padding: "14px" }}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  marginBottom: 8,
+                }}
+              >
+                <span
+                  style={{
+                    fontFamily: "'Special Elite',cursive",
+                    fontSize: 10,
+                    letterSpacing: 2,
+                    color: "#694818",
+                  }}
+                >
+                  Votes Tallied
+                </span>
+                <span
+                  style={{
+                    fontFamily: "'Playfair Display',serif",
+                    fontWeight: 900,
+                    fontSize: 18,
+                  }}
+                >
+                  {counted.toLocaleString()} / {totalVotes.toLocaleString()}
+                </span>
+              </div>
+              <div className="progress-track">
+                <div
+                  className="progress-fill"
+                  style={{ width: `${progress}%` }}
+                />
+              </div>
+              <div
+                style={{
+                  fontFamily: "'Special Elite',cursive",
+                  fontSize: 9,
+                  color: "#694818",
+                  marginTop: 5,
+                  letterSpacing: 2,
+                  textTransform: "uppercase",
+                }}
+              >
+                {progress < 100 ? (
+                  <span>
+                    Counting in progress <span className="blink">●</span>
+                  </span>
+                ) : (
+                  "Complete ✓"
+                )}
+              </div>
+            </div>
+          </div>
+          <div className="srule">Live Tally (Partial)</div>
+          <div style={{ border: "1px solid #b8946a" }}>
+            {allResults.map((r, i) => {
+              const displayVotes = Math.round(r.votes * (progress / 100));
+              const barPct =
+                allResults[0].votes > 0
+                  ? Math.round((displayVotes / allResults[0].votes) * 100)
+                  : 0;
+              return (
+                <div key={i} className="counting-row">
+                  <div
+                    style={{
+                      width: 96,
+                      fontFamily: "'Libre Baskerville',serif",
+                      fontSize: 12,
+                      fontWeight: r.isSelf ? 700 : 400,
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 4,
+                      flexShrink: 0,
+                    }}
+                  >
+                    <img
+                      src={r.party.symbol}
+                      alt={r.party.short}
+                      style={{ width: 34, height: 34, objectFit: "contain" }}
+                    />
+                    <span style={{ color: r.isSelf ? "#780e0e" : "#170d00" }}>
+                      {r.name.split(" ")[0]}
+                      {r.isSelf ? " ★" : ""}
+                    </span>
+                  </div>
+                  <div className="cbar-track">
+                    <div
+                      className="cbar-fill"
+                      style={{
+                        width: `${barPct}%`,
+                        background: r.isSelf ? party.color : r.party.color,
+                      }}
+                    />
+                  </div>
+                  <div
+                    style={{
+                      width: 72,
+                      textAlign: "right",
+                      fontFamily: "'Special Elite',cursive",
+                      fontSize: 11,
+                      letterSpacing: 1,
+                      flexShrink: 0,
+                    }}
+                  >
+                    {displayVotes.toLocaleString()}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Policy score summary */}
+          <div style={{ border: "1px solid #b8946a", marginTop: 14 }}>
             <div className="ink-blue">
               <div
                 style={{
@@ -224,127 +351,6 @@ export default function CountingScreen({
                 {Math.round((totalPolicyScore / maxPolicyScore) * 100)}%
               </span>
             </div>
-          </div>
-          {/* Counting progress */}
-          <div style={{ border: "1px solid #b8946a", marginBottom: 14 }}>
-            <div className="ink">
-              <div
-                style={{
-                  fontFamily: "'Special Elite',cursive",
-                  fontSize: 10,
-                  letterSpacing: 4,
-                  textTransform: "uppercase",
-                }}
-              >
-                Ballot Count Progress
-              </div>
-            </div>
-            <div style={{ padding: "14px" }}>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  marginBottom: 8,
-                }}
-              >
-                <span
-                  style={{
-                    fontFamily: "'Special Elite',cursive",
-                    fontSize: 10,
-                    letterSpacing: 2,
-                    color: "#694818",
-                  }}
-                >
-                  Votes Tallied
-                </span>
-                <span
-                  style={{
-                    fontFamily: "'Playfair Display',serif",
-                    fontWeight: 900,
-                    fontSize: 18,
-                  }}
-                >
-                  {counted.toLocaleString()} / {totalVotes.toLocaleString()}
-                </span>
-              </div>
-              <div className="progress-track">
-                <div
-                  className="progress-fill"
-                  style={{ width: `${progress}%` }}
-                />
-              </div>
-              <div
-                style={{
-                  fontFamily: "'Special Elite',cursive",
-                  fontSize: 9,
-                  color: "#694818",
-                  marginTop: 5,
-                  letterSpacing: 2,
-                  textTransform: "uppercase",
-                }}
-              >
-                {progress < 100 ? (
-                  <span>
-                    Counting in progress <span className="blink">●</span>
-                  </span>
-                ) : (
-                  "Complete ✓"
-                )}
-              </div>
-            </div>
-          </div>
-          <div className="srule">Live Tally (Partial)</div>
-          <div style={{ border: "1px solid #b8946a" }}>
-            {allResults.map((r, i) => {
-              const displayVotes = Math.round(r.votes * (progress / 100));
-              const barPct =
-                allResults[0].votes > 0
-                  ? Math.round((displayVotes / allResults[0].votes) * 100)
-                  : 0;
-              return (
-                <div key={i} className="counting-row">
-                  <div
-                    style={{
-                      width: 96,
-                      fontFamily: "'Libre Baskerville',serif",
-                      fontSize: 12,
-                      fontWeight: r.isSelf ? 700 : 400,
-                      display: "flex",
-                      alignItems: "center",
-                      gap: 4,
-                      flexShrink: 0,
-                    }}
-                  >
-                    <span>{r.party.symbol}</span>
-                    <span style={{ color: r.isSelf ? "#780e0e" : "#170d00" }}>
-                      {r.name.split(" ")[0]}
-                      {r.isSelf ? " ★" : ""}
-                    </span>
-                  </div>
-                  <div className="cbar-track">
-                    <div
-                      className="cbar-fill"
-                      style={{
-                        width: `${barPct}%`,
-                        background: r.isSelf ? party.color : r.party.color,
-                      }}
-                    />
-                  </div>
-                  <div
-                    style={{
-                      width: 72,
-                      textAlign: "right",
-                      fontFamily: "'Special Elite',cursive",
-                      fontSize: 11,
-                      letterSpacing: 1,
-                      flexShrink: 0,
-                    }}
-                  >
-                    {displayVotes.toLocaleString()}
-                  </div>
-                </div>
-              );
-            })}
           </div>
         </div>
       </div>

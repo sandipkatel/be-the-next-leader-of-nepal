@@ -101,7 +101,6 @@ export default function SetupScreen({ onStart }) {
                   color: "#694818",
                   textTransform: "uppercase",
                   marginBottom: 8,
-                  
                 }}
               >
                 <strong>Your Full Name</strong>
@@ -161,7 +160,7 @@ export default function SetupScreen({ onStart }) {
               >
                 {PARTIES.map((p) => (
                   <option key={p.id} value={p.id}>
-                    {p.symbol} {p.name} ({p.short})
+                    {p.name} ({p.short})
                   </option>
                 ))}
               </select>

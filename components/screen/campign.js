@@ -109,21 +109,11 @@ export default function CampaignScreen({
                   background: "rgba(255,255,255,.22)",
                 }}
               >
-                <div
-                  style={{
-                    width: 34,
-                    height: 34,
-                    borderRadius: "50%",
-                    background: op.party.color,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontSize: 14,
-                    flexShrink: 0,
-                  }}
-                >
-                  {op.party.symbol}
-                </div>
+                <img
+                  src={op.party.symbol}
+                  alt={op.party.short}
+                  style={{ width: 34, height: 34, objectFit: "contain" }}
+                />
                 <div>
                   <div
                     style={{

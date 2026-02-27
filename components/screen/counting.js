@@ -9,6 +9,7 @@ export default function CountingScreen({
   opponents,
   policyResults,
   onResult,
+  totalVotes,
 }) {
   const { name, district, party, difficulty } = setup;
   const [progress, setProgress] = useState(0);
@@ -23,7 +24,6 @@ export default function CountingScreen({
     maxPolicyScore,
     difficulty,
   );
-  const totalVotes = rnd(7000, 187000);
   const playerVotes = Math.round((playerPct / 100) * totalVotes);
   const opponentVotes = totalVotes - playerVotes;
 
@@ -178,7 +178,7 @@ export default function CountingScreen({
               const displayVotes = Math.round(r.votes * (progress / 100));
               const barPct =
                 allResults[0].votes > 0
-                  ? Math.round((displayVotes / allResults[0].votes) * 100)
+                  ? Math.round((displayVotes / totalVotes) * 100)
                   : 0;
               return (
                 <div key={i} className="counting-row">

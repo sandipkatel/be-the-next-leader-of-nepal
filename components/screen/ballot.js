@@ -4,7 +4,6 @@ import { useState } from "react";
 import Masthead from "../ui/masthead";
 import { NARRATOR } from "../../data/narrators";
 import { shuffle } from "../../utils/shuffle";
-import { Autour_One } from "next/font/google";
 
 export default function BallotScreen({ setup, opponents, onVote }) {
   const { name, district, party } = setup;
@@ -12,12 +11,10 @@ export default function BallotScreen({ setup, opponents, onVote }) {
     shuffle([{ name, party }, ...opponents.map((o) => ({ ...o }))]),
   );
   const [selected, setSelected] = useState(null);
-  const [phase, setPhase] = useState("choose");
 
   const handleCast = (i) => {
     setSelected(i);
-    setPhase("confirm");
-    setTimeout(() => onVote(allCandidates[selected]), 2000);
+    setTimeout(() => onVote(allCandidates[selected]), 3000);
   };
 
   return (
@@ -158,6 +155,11 @@ export default function BallotScreen({ setup, opponents, onVote }) {
             </div>
 
             {/* Footer */}
+            <div  style={{
+                display: "flex",
+                justifyContent: "center",
+                paddingTop: 8,
+              }}>
             <div
               style={{
                 paddingBottom: "12px",
@@ -167,70 +169,28 @@ export default function BallotScreen({ setup, opponents, onVote }) {
                 fontWeight: "bold",
               }}
             >
-              मतदान अधिकृतको दस्तखत :
+              मतदान अधिकृतको दस्तखत :{" "}
+              </div>
+              <div
+                style={{
+                  fontFamily: "'Carattere', 'Allura', cursive",
+                  fontSize: 18,
+                  fontWeight: 800,
+                  fontStyle: "italic",
+                  paddingLeft: 8,
+                  marginTop: -8,
+                  textDecoration: "underline",
+                  rotate: "-20deg",
+                  letterSpacing: "2px",
+                }}
+              >
+                Sandip
+              </div>
             </div>
           </div>
 
           {/* Action buttons */}
           <div style={{ marginTop: 14 }}>
-            {!selected && phase === "confirm" && (
-              <div>
-                <div
-                  style={{
-                    border: "1px solid #780e0e",
-                    padding: "12px 14px",
-                    marginBottom: 10,
-                    background: "rgba(120,14,14,.05)",
-                  }}
-                >
-                  <div
-                    style={{
-                      fontFamily: "'Special Elite',cursive",
-                      fontSize: 10,
-                      letterSpacing: 3,
-                      color: "#780e0e",
-                      textTransform: "uppercase",
-                      marginBottom: 5,
-                    }}
-                  >
-                    Confirm Your Vote
-                  </div>
-                  <div
-                    style={{
-                      fontFamily: "'Playfair Display',serif",
-                      fontWeight: 700,
-                      fontSize: 15,
-                    }}
-                  >
-                    {allCandidates[selected]?.name}
-                  </div>
-                  <div
-                    style={{
-                      fontFamily: "'Special Elite',cursive",
-                      fontSize: 10,
-                      color: "#694818",
-                      marginTop: 2,
-                    }}
-                  >
-                    {allCandidates[selected]?.party.name}
-                  </div>
-                  <div
-                    style={{
-                      fontFamily: "'Libre Baskerville',serif",
-                      fontSize: 12,
-                      color: "#694818",
-                      marginTop: 5,
-                      fontStyle: "italic",
-                    }}
-                  >
-                    Once sealed, your ballot cannot be changed.
-                  </div>
-                </div>
-                <button className="btn-ink" onClick={handleCast}>
-                  Cast Ballot ✗
-                </button>
-              </div>
-            )}
             {selected && (
               <div
                 style={{ textAlign: "center", padding: "16px 0" }}

@@ -13,6 +13,7 @@ import { PROBLEMS } from "../data/problems";
 import { OPPONENT_NAMES } from "../data/opponents";
 import { PARTIES } from "../data/parties";
 import { VOTER_TYPES } from "../data/voters";
+import { rnd } from "../helpers/logic";
 
 export default function App() {
   const [screen, setScreen] = useState("setup");
@@ -26,6 +27,7 @@ export default function App() {
   const [policyResults, setPolicyResults] = useState([]);
   const [districtResult, setDistrictResult] = useState(null);
   const [allResults, setAllResults] = useState(null);
+  const totalVotes = rnd(7000, 187000);
 
   useEffect(() => {
     if (setup) {
@@ -33,8 +35,12 @@ export default function App() {
         problems: shuffle(PROBLEMS).slice(0, 3),
         voters: shuffle(VOTER_TYPES).slice(0, 5),
         opponents: shuffle(OPPONENT_NAMES)
-          .map((n, i) => ({ name: n, party: PARTIES[(i + 1) % PARTIES.length] }))
-          .filter(o => o.party.id !== setup?.party.id).slice(0, 3),
+          .map((n, i) => ({
+            name: n,
+            party: PARTIES[(i + 1) % PARTIES.length],
+          }))
+          .filter((o) => o.party.id !== setup?.party.id)
+          .slice(0, 4),
         issues: shuffle([
           "road connectivity",
           "power supply",
@@ -100,6 +106,7 @@ export default function App() {
           setAllResults(a);
           setScreen("district-result");
         }}
+        totalVotes={totalVotes}
       />
     );
   if (screen === "district-result")

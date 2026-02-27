@@ -46,27 +46,9 @@ export default function NationalResultScreen({
           style={{ maxWidth: 720, margin: "0 auto", padding: "18px 16px" }}
           className="fade-in"
         >
-          <div style={{ textAlign: "center", marginBottom: 14 }}>
-            {partyWon ? (
-              <div
-                className="stamp stamp-g stamp-in"
-                style={{ fontSize: 13, padding: "6px 22px", letterSpacing: 5 }}
-              >
-                MAJORITY SECURED ✓
-              </div>
-            ) : (
-              <div
-                className="stamp stamp-in"
-                style={{ fontSize: 12, padding: "6px 22px", letterSpacing: 4 }}
-              >
-                HUNG PARLIAMENT
-              </div>
-            )}
-          </div>
 
           <div
             style={{
-              borderTop: "4px solid #170d00",
               borderBottom: "1px solid #170d00",
               padding: "12px 0",
               marginBottom: 14,

@@ -17,13 +17,13 @@ export default function CountingScreen({
     (s, r) => s + r.scores.reduce((ss, x) => ss + x.score, 0),
     0,
   );
-  const maxPolicyScore = policyResults.length * 5 * 100; // rounds × voters × 100
+  const maxPolicyScore = policyResults.length * 4 * 100; // rounds × voters × 100
   const playerPct = policyScoreToVotePct(
     totalPolicyScore,
     maxPolicyScore,
     difficulty,
   );
-  const totalVotes = rnd(22000, 58000);
+  const totalVotes = rnd(7000, 187000);
   const playerVotes = Math.round((playerPct / 100) * totalVotes);
   const opponentVotes = totalVotes - playerVotes;
 
@@ -60,10 +60,10 @@ export default function CountingScreen({
               { playerVotes, opponentVotes, totalVotes, pct: playerPct },
               allResults,
             ),
-          3000,
+          4000,
         );
       }
-    }, 55);
+    }, 250);
     return () => clearInterval(t);
   }, []);
 
@@ -83,7 +83,6 @@ export default function CountingScreen({
         >
           <div
             style={{
-              borderTop: "4px solid #170d00",
               borderBottom: "1px solid #170d00",
               padding: "10px 0",
               marginBottom: 14,
@@ -104,130 +103,7 @@ export default function CountingScreen({
               specific — earns votes.
             </div>
           </div>
-          {/* Policy score summary */}
-          <div style={{ border: "1px solid #b8946a", marginBottom: 14 }}>
-            <div className="ink-blue">
-              <div
-                style={{
-                  fontFamily: "'Special Elite',cursive",
-                  fontSize: 10,
-                  letterSpacing: 4,
-                  textTransform: "uppercase",
-                }}
-              >
-                Policy Performance Summary
-              </div>
-            </div>
-            <div
-              style={{
-                padding: "10px 14px",
-                display: "flex",
-                flexDirection: "column",
-                gap: 6,
-              }}
-            >
-              {policyResults.map((r, i) => {
-                const rs = r.scores.reduce((s, x) => s + x.score, 0);
-                const rmax = r.scores.length * 100;
-                const pct = Math.round((rs / rmax) * 100);
-                return (
-                  <div
-                    key={i}
-                    style={{ display: "flex", alignItems: "center", gap: 10 }}
-                  >
-                    <span style={{ fontSize: 18, flexShrink: 0 }}>
-                      {r.problem.emoji}
-                    </span>
-                    <div style={{ flex: 1 }}>
-                      <div
-                        style={{
-                          fontFamily: "'Special Elite',cursive",
-                          fontSize: 9,
-                          letterSpacing: 1,
-                          color: "#694818",
-                          textTransform: "uppercase",
-                        }}
-                      >
-                        {r.problem.title}
-                      </div>
-                      <div
-                        style={{
-                          height: 6,
-                          background: "#e8d8a0",
-                          border: "1px solid #b8946a",
-                          marginTop: 3,
-                          overflow: "hidden",
-                        }}
-                      >
-                        <div
-                          style={{
-                            height: "100%",
-                            width: `${pct}%`,
-                            background:
-                              pct >= 60
-                                ? "#0d4018"
-                                : pct >= 40
-                                  ? "#8a7010"
-                                  : "#780e0e",
-                            transition: "width 1s ease",
-                          }}
-                        />
-                      </div>
-                    </div>
-                    <div
-                      style={{
-                        fontFamily: "'Playfair Display',serif",
-                        fontWeight: 900,
-                        fontSize: 16,
-                        color:
-                          pct >= 60
-                            ? "#0d4018"
-                            : pct >= 40
-                              ? "#8a7010"
-                              : "#780e0e",
-                        flexShrink: 0,
-                        width: 40,
-                        textAlign: "right",
-                      }}
-                    >
-                      {pct}%
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-            <div
-              style={{
-                padding: "8px 14px",
-                borderTop: "1px solid #d8c080",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-              }}
-            >
-              <span
-                style={{
-                  fontFamily: "'Special Elite',cursive",
-                  fontSize: 9,
-                  letterSpacing: 2,
-                  color: "#694818",
-                  textTransform: "uppercase",
-                }}
-              >
-                Overall Policy Rating
-              </span>
-              <span
-                style={{
-                  fontFamily: "'Playfair Display',serif",
-                  fontWeight: 900,
-                  fontSize: 20,
-                  color: "#170d00",
-                }}
-              >
-                {Math.round((totalPolicyScore / maxPolicyScore) * 100)}%
-              </span>
-            </div>
-          </div>
+
           {/* Counting progress */}
           <div style={{ border: "1px solid #b8946a", marginBottom: 14 }}>
             <div className="ink">
@@ -318,7 +194,11 @@ export default function CountingScreen({
                       flexShrink: 0,
                     }}
                   >
-                    <span>{r.party.symbol}</span>
+                    <img
+                      src={r.party.symbol}
+                      alt={r.party.short}
+                      style={{ width: 34, height: 34, objectFit: "contain" }}
+                    />
                     <span style={{ color: r.isSelf ? "#780e0e" : "#170d00" }}>
                       {r.name.split(" ")[0]}
                       {r.isSelf ? " ★" : ""}
@@ -348,6 +228,128 @@ export default function CountingScreen({
                 </div>
               );
             })}
+          </div>
+
+          {/* Policy score summary */}
+          <div style={{ border: "1px solid #b8946a", marginTop: 14 }}>
+            <div className="ink-blue">
+              <div
+                style={{
+                  fontFamily: "'Special Elite',cursive",
+                  fontSize: 10,
+                  letterSpacing: 4,
+                  textTransform: "uppercase",
+                }}
+              >
+                Policy Performance Summary
+              </div>
+            </div>
+            <div
+              style={{
+                padding: "10px 14px",
+                display: "flex",
+                flexDirection: "column",
+                gap: 6,
+              }}
+            >
+              {policyResults.map((r, i) => {
+                const rs = r.scores.reduce((s, x) => s + x.score, 0);
+                const rmax = r.scores.length * 100;
+                const pct = Math.round((rs / rmax) * 100);
+                return (
+                  <div
+                    key={i}
+                    style={{ display: "flex", alignItems: "center", gap: 10 }}
+                  >
+                    <div style={{ flex: 1 }}>
+                      <div
+                        style={{
+                          fontFamily: "'Special Elite',cursive",
+                          fontSize: 9,
+                          letterSpacing: 1,
+                          color: "#694818",
+                          textTransform: "uppercase",
+                        }}
+                      >
+                        {r.problem.title}
+                      </div>
+                      <div
+                        style={{
+                          height: 6,
+                          background: "#e8d8a0",
+                          border: "1px solid #b8946a",
+                          marginTop: 3,
+                          overflow: "hidden",
+                        }}
+                      >
+                        <div
+                          style={{
+                            height: "100%",
+                            width: `${pct}%`,
+                            background:
+                              pct >= 60
+                                ? "#0d4018"
+                                : pct >= 40
+                                  ? "#8a7010"
+                                  : "#780e0e",
+                            transition: "width 1s ease",
+                          }}
+                        />
+                      </div>
+                    </div>
+                    <div
+                      style={{
+                        fontFamily: "'Playfair Display',serif",
+                        fontWeight: 900,
+                        fontSize: 16,
+                        color:
+                          pct >= 60
+                            ? "#0d4018"
+                            : pct >= 40
+                              ? "#8a7010"
+                              : "#780e0e",
+                        flexShrink: 0,
+                        width: 40,
+                        textAlign: "right",
+                      }}
+                    >
+                      {pct}%
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+            <div
+              style={{
+                padding: "8px 14px",
+                borderTop: "1px solid #d8c080",
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <span
+                style={{
+                  fontFamily: "'Special Elite',cursive",
+                  fontSize: 9,
+                  letterSpacing: 2,
+                  color: "#694818",
+                  textTransform: "uppercase",
+                }}
+              >
+                Overall Policy Rating
+              </span>
+              <span
+                style={{
+                  fontFamily: "'Playfair Display',serif",
+                  fontWeight: 900,
+                  fontSize: 20,
+                  color: "#170d00",
+                }}
+              >
+                {Math.round((totalPolicyScore / maxPolicyScore) * 100)}%
+              </span>
+            </div>
           </div>
         </div>
       </div>

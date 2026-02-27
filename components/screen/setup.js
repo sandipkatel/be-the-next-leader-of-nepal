@@ -14,21 +14,11 @@ export default function SetupScreen({ onStart }) {
       <div className="z1">
         <Masthead sub="Candidate Registration · उम्मेदवार दर्ता" />
         <div
-          style={{ maxWidth: 720, margin: "0 auto", padding: "20px 16px" }}
+          style={{ maxWidth: 820, margin: "0 auto", padding: "20px 16px" }}
           className="fade-in"
         >
-          <div style={{ display: "flex", gap: 8, marginBottom: 16 }}>
-            <div className="stamp stamp-in">Election 2082</div>
-            <div
-              className="stamp stamp-b stamp-in"
-              style={{ animationDelay: ".1s" }}
-            >
-              Official
-            </div>
-          </div>
           <div
             style={{
-              borderTop: "4px solid #170d00",
               borderBottom: "1px solid #170d00",
               padding: "12px 0",
               marginBottom: 14,
@@ -66,7 +56,7 @@ export default function SetupScreen({ onStart }) {
               ["275", "Total Seats"],
               ["138", "Majority Mark"],
               ["3", "Policy Rounds"],
-              ["5", "Voters Judge"],
+              ["4", "Voters Judge"],
             ].map(([n, l], i) => (
               <div
                 key={i}

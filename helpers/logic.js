@@ -32,7 +32,7 @@ export function policyScoreToVotePct(
   difficulty,
 ) {
   const ratio = totalPolicyScore / maxPolicyScore; // 0..1
-  const bases = { easy: [42, 65], medium: [32, 60], hard: [22, 55] };
+  const bases = { easy: [45, 75], medium: [22, 50], hard: [12, 45] };
   const [lo, hi] = bases[difficulty];
   return Math.round(lo + ratio * (hi - lo));
 }

@@ -76,7 +76,7 @@ export default function PolicyScreen({ setup, problems, voters, onComplete }) {
           ticker={`${name} addresses ${district} voters on ${problem.title} · Crowd listens closely · ${party.pm} watches from Kathmandu`}
         />
         <div
-          style={{ maxWidth: 720, margin: "0 auto", padding: "16px 16px" }}
+          style={{ maxWidth: 820, margin: "0 auto", padding: "16px 16px" }}
           className="fade-in"
         >
           {/* Progress */}
@@ -129,9 +129,6 @@ export default function PolicyScreen({ setup, problems, voters, onComplete }) {
               <div
                 style={{ display: "flex", alignItems: "flex-start", gap: 12 }}
               >
-                <span style={{ fontSize: 38, lineHeight: 1, flexShrink: 0 }}>
-                  {problem.emoji}
-                </span>
                 <div>
                   <div
                     className="hl"

@@ -16,26 +16,11 @@ export default function CampaignScreen({
           ticker={`${name} of ${party.short} campaigns in ${district} · Voters demand answers on ${issues[0]} · Rivals mobilise`}
         />
         <div
-          style={{ maxWidth: 720, margin: "0 auto", padding: "18px 16px" }}
+          style={{ maxWidth: 820, margin: "0 auto", padding: "18px 16px" }}
           className="fade-in"
         >
-          <div style={{ display: "flex", gap: 8, marginBottom: 14 }}>
-            <div
-              className="stamp stamp-in"
-              style={{ borderColor: party.color, color: party.color }}
-            >
-              {party.symbol} {party.short}
-            </div>
-            <div
-              className="stamp stamp-b stamp-in"
-              style={{ animationDelay: ".1s" }}
-            >
-              3 Days To Vote
-            </div>
-          </div>
           <div
             style={{
-              borderTop: "4px solid #170d00",
               borderBottom: "1px solid #170d00",
               padding: "12px 0",
               marginBottom: 14,
@@ -153,61 +138,6 @@ export default function CampaignScreen({
                 </div>
               </div>
             ))}
-          </div>
-          <div
-            style={{
-              background: "#303b50fb",
-              color: "#f3e8c8",
-              padding: "14px 16px",
-              marginBottom: 16,
-              position: "relative",
-              overflow: "hidden",
-            }}
-          >
-            <div
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                right: 0,
-                height: 3,
-                background: `linear-gradient(90deg,${party.color},#f3e8c844,${party.color})`,
-              }}
-            />
-            <div
-              style={{
-                fontFamily: "'Special Elite',cursive",
-                fontSize: 9,
-                letterSpacing: 4,
-                textTransform: "uppercase",
-                opacity: 0.7,
-                marginBottom: 5,
-              }}
-            >
-              Your Party's PM Candidate
-            </div>
-            <div
-              style={{
-                fontFamily: "'Playfair Display',serif",
-                fontWeight: 900,
-                fontSize: 22,
-                lineHeight: 1.1,
-              }}
-            >
-              {party.pm}
-            </div>
-            <div
-              style={{
-                fontFamily: "'Libre Baskerville',serif",
-                fontSize: 12,
-                opacity: 0.85,
-                marginTop: 6,
-                fontStyle: "italic",
-              }}
-            >
-              "{party.name} needs a majority. Your seat in {district} is vital
-              to our mandate. The people need to hear your policies."
-            </div>
           </div>
           <button className="btn-ink" onClick={onContinue}>
             Address the Public — Policy Stage →

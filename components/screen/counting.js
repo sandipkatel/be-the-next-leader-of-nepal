@@ -17,13 +17,13 @@ export default function CountingScreen({
     (s, r) => s + r.scores.reduce((ss, x) => ss + x.score, 0),
     0,
   );
-  const maxPolicyScore = policyResults.length * 5 * 100; // rounds × voters × 100
+  const maxPolicyScore = policyResults.length * 4 * 100; // rounds × voters × 100
   const playerPct = policyScoreToVotePct(
     totalPolicyScore,
     maxPolicyScore,
     difficulty,
   );
-  const totalVotes = rnd(22000, 58000);
+  const totalVotes = rnd(7000, 187000);
   const playerVotes = Math.round((playerPct / 100) * totalVotes);
   const opponentVotes = totalVotes - playerVotes;
 
@@ -83,7 +83,6 @@ export default function CountingScreen({
         >
           <div
             style={{
-              borderTop: "4px solid #170d00",
               borderBottom: "1px solid #170d00",
               padding: "10px 0",
               marginBottom: 14,

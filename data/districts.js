@@ -12,7 +12,7 @@ export const DISTRICTS = [
   "Palpa - 2",
   "Kavre - 1",
   "Kavre - 2",
-  "Hetauda",
+  "Okhaldhunga",
   "Nepalgunj",
   "Dhangadhi",
   "Jumla",

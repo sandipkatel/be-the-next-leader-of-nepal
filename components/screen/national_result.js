@@ -79,7 +79,7 @@ export default function NationalResultScreen({
             </div>
             <div className="byline">
               {progress >= 100 ? "Special Edition" : "Live Update"} · National
-              Results · Shree Patrika
+              Results 2082
             </div>
             <div className="body">
               {progress >= 100
@@ -502,7 +502,7 @@ export default function NationalResultScreen({
                   letterSpacing: 2,
                 }}
               >
-                SHREE PATRIKA · श्री पत्रिका · ELECTION 2082 COVERAGE
+                 ELECTION 2082 COVERAGE
               </div>
             </>
           )}

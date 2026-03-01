@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Shree Patrika — Nepal Election Simulation 2082",
+  title: "Nepal Election Simulation 2082",
   description:
     "Contest a parliamentary seat in Nepal's federal election. Write policies, win voters, and watch your party's PM take oath at Singha Durbar.",
   keywords: [
@@ -20,7 +20,6 @@ export const metadata = {
     "election simulation",
     "Nepal 2082",
     "parliamentary game",
-    "Shree Patrika",
     "Nepal politics",
   ],
   authors: [{ name: "Sandip Katel" }],
@@ -33,17 +32,17 @@ export const metadata = {
   },
 
   openGraph: {
-    title: "Shree Patrika — Nepal Election Simulation 2082",
+    title: "Nepal Election Simulation 2082",
     description:
       "Contest a parliamentary seat in Nepal's federal election. Write policies, win voters, and watch your party's PM take oath at Singha Durbar.",
-    url: "https://patrika.skatel.com,np",
-    siteName: "Shree Patrika",
+    url: "https://election.skatel.com,np",
+    siteName: "Sandip Katel",
     images: [
       {
         url: "/cover_image.png",
         width: 1200,
         height: 630,
-        alt: "Shree Patrika — Nepal Election Simulation 2082",
+        alt: "Nepal Election Simulation 2082",
       },
     ],
     locale: "en_US",
@@ -52,7 +51,7 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Shree Patrika — Nepal Election Simulation 2082",
+    title: "Nepal Election Simulation 2082",
     description:
       "Contest a parliamentary seat in Nepal's federal election. Write policies, win voters, and watch your party's PM take oath at Singha Durbar.",
     images: ["/cover_image.png"],

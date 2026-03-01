@@ -109,6 +109,7 @@ export default function BallotScreen({ setup, opponents, onVote }) {
                   }}
                 >
                   <div
+                  className="stamp-in"
                     style={{
                       width: "clamp(35px, 8vw, 55px)",
                       height: "clamp(35px, 8vw, 55px)",

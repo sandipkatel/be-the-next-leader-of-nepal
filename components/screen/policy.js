@@ -139,7 +139,7 @@ export default function PolicyScreen({ setup, problems, voters, onComplete }) {
                   >
                     {problem.headline}
                   </div>
-                  <div className="body" style={{ fontSize: 13 }}>
+                  <div className="body" style={{ fontSize: 15 }}>
                     {problem.body}
                   </div>
                 </div>

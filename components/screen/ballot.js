@@ -177,12 +177,11 @@ export default function BallotScreen({ setup, opponents, onVote }) {
                   fontFamily: "'Carattere', 'Allura', cursive",
                   fontSize: 18,
                   fontWeight: 800,
-                  fontStyle: "italic",
                   paddingLeft: 8,
                   marginTop: -8,
                   textDecoration: "underline",
                   rotate: "-20deg",
-                  letterSpacing: "2px",
+                  letterSpacing: "0.5px",
                 }}
               >
                 Sandip
@@ -199,11 +198,11 @@ export default function BallotScreen({ setup, opponents, onVote }) {
               >
                 <div
                   style={{
-                    fontFamily: "'Special Elite',cursive",
+                    fontFamily: "var(--font-headline), serif",
                     fontSize: 11,
-                    letterSpacing: 4,
+                    letterSpacing: 0.5,
                     color: "#0d4018",
-                    textTransform: "uppercase",
+                    textTransform: "capitalize",
                   }}
                 >
                   ✓ Ballot Sealed · Counting Begins…

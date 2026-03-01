@@ -1,14 +1,42 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import {
+  Playfair_Display,
+  Merriweather,
+  Inter,
+  DM_Serif_Display,
+  Source_Sans_3,
+} from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const playfairDisplay = Playfair_Display({
+  variable: "--font-headline",
+  subsets: ["latin"],
+  weight: ["400", "600", "700", "900"],
+  style: ["normal", "italic"],
+});
+
+const merriweather = Merriweather({
+  variable: "--font-body",
+  subsets: ["latin"],
+  weight: ["300", "400", "700", "900"],
+  style: ["normal", "italic"],
+});
+
+const inter = Inter({
+  variable: "--font-ui",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const dmSerifDisplay = DM_Serif_Display({
+  variable: "--font-subhead",
   subsets: ["latin"],
+  weight: ["400"],
+  style: ["normal", "italic"],
+});
+
+const sourceSans3 = Source_Sans_3({
+  variable: "--font-caption",
+  subsets: ["latin"],
+  weight: ["300", "400", "600"],
 });
 
 export const metadata = {
@@ -62,7 +90,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${playfairDisplay.variable} ${merriweather.variable} ${inter.variable} ${dmSerifDisplay.variable} ${sourceSans3.variable} antialiased`}
       >
         {children}
       </body>

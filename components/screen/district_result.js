@@ -61,10 +61,10 @@ export default function DistrictResultScreen({
             <div className="ink">
               <div
                 style={{
-                  fontFamily: "'Special Elite',cursive",
+                  fontFamily: "var(--font-headline), serif",
                   fontSize: 10,
-                  letterSpacing: 4,
-                  textTransform: "uppercase",
+                  letterSpacing: 0.5,
+                  textTransform: "capitalize",
                 }}
               >
                 Final Count — {district}
@@ -119,7 +119,7 @@ export default function DistrictResultScreen({
                       {r.isSelf && (
                         <span
                           style={{
-                            fontFamily: "'Special Elite',cursive",
+                            fontFamily: "var(--font-headline), serif",
                             fontSize: 9,
                             color: "#780e0e",
                             border: "1px solid #780e0e",
@@ -157,7 +157,7 @@ export default function DistrictResultScreen({
                       </div>
                       <div
                         style={{
-                          fontFamily: "'Special Elite',cursive",
+                          fontFamily: "var(--font-headline), serif",
                           fontSize: 10,
                           color: "#694818",
                           width: 64,
@@ -178,10 +178,10 @@ export default function DistrictResultScreen({
             <div className="ink-blue">
               <div
                 style={{
-                  fontFamily: "'Special Elite',cursive",
+                  fontFamily: "var(--font-headline), serif",
                   fontSize: 10,
-                  letterSpacing: 4,
-                  textTransform: "uppercase",
+                  letterSpacing: 0.5,
+                  textTransform: "capitalize",
                 }}
               >
                 How Policies Influenced Votes
@@ -198,11 +198,11 @@ export default function DistrictResultScreen({
                 <div>
                   <div
                     style={{
-                      fontFamily: "'Special Elite',cursive",
+                      fontFamily: "var(--font-headline), serif",
                       fontSize: 9,
-                      letterSpacing: 2,
+                      letterSpacing: 0.3,
                       color: "#694818",
-                      textTransform: "uppercase",
+                      textTransform: "capitalize",
                     }}
                   >
                     Policy Rating
@@ -221,7 +221,7 @@ export default function DistrictResultScreen({
                 <div style={{ textAlign: "center" }}>
                   <div
                     style={{
-                      fontFamily: "'Special Elite',cursive",
+                      fontFamily: "var(--font-headline), serif",
                       fontSize: 24,
                       color: "#694818",
                     }}
@@ -232,11 +232,11 @@ export default function DistrictResultScreen({
                 <div style={{ textAlign: "right" }}>
                   <div
                     style={{
-                      fontFamily: "'Special Elite',cursive",
+                      fontFamily: "var(--font-headline), serif",
                       fontSize: 9,
-                      letterSpacing: 2,
+                      letterSpacing: 0.3,
                       color: "#694818",
-                      textTransform: "uppercase",
+                      textTransform: "capitalize",
                     }}
                   >
                     Vote Share
@@ -255,7 +255,7 @@ export default function DistrictResultScreen({
               </div>
               <div
                 className="body"
-                style={{ fontSize: 12, fontStyle: "italic", color: "#5a3a0a" }}
+                style={{ fontSize: 12, color: "#5a3a0a" }}
               >
                 {policyPct >= 65
                   ? "Your detailed, specific policies resonated deeply with voters. They felt you understood their problems."

@@ -41,10 +41,10 @@ export default function CampaignScreen({
             <div className="ink">
               <div
                 style={{
-                  fontFamily: "'Special Elite',cursive",
+                  fontFamily: "var(--font-headline), serif",
                   fontSize: 10,
-                  letterSpacing: 4,
-                  textTransform: "uppercase",
+                  letterSpacing: 0.5,
+                  textTransform: "capitalize",
                 }}
               >
                 Key Issues — {district}
@@ -126,11 +126,11 @@ export default function CampaignScreen({
                   </div>
                   <div
                     style={{
-                      fontFamily: "'Special Elite',cursive",
+                      fontFamily: "var(--font-headline), serif",
                       fontSize: 9,
-                      letterSpacing: 2,
+                      letterSpacing: 0.3,
                       color: "#694818",
-                      textTransform: "uppercase",
+                      textTransform: "capitalize",
                     }}
                   >
                     {op.party.short}

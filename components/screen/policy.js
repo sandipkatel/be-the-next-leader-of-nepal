@@ -116,10 +116,10 @@ export default function PolicyScreen({ setup, problems, voters, onComplete }) {
             <div className="ink-red">
               <div
                 style={{
-                  fontFamily: "'Special Elite',cursive",
+                  fontFamily: "var(--font-headline), serif",
                   fontSize: 10,
-                  letterSpacing: 5,
-                  textTransform: "uppercase",
+                  letterSpacing: 0.5,
+                  textTransform: "capitalize",
                 }}
               >
                 ⚠ Problem Statement — Round {round + 1}
@@ -156,10 +156,10 @@ export default function PolicyScreen({ setup, problems, voters, onComplete }) {
                 <div className="ink">
                   <div
                     style={{
-                      fontFamily: "'Special Elite',cursive",
+                      fontFamily: "var(--font-headline), serif",
                       fontSize: 10,
-                      letterSpacing: 4,
-                      textTransform: "uppercase",
+                      letterSpacing: 0.5,
+                      textTransform: "capitalize",
                     }}
                   >
                     Your Policy Statement, {name}
@@ -184,10 +184,10 @@ export default function PolicyScreen({ setup, problems, voters, onComplete }) {
                   >
                     <div
                       style={{
-                        fontFamily: "'Special Elite',cursive",
+                        fontFamily: "var(--font-headline), serif",
                         fontSize: 9,
                         color: "#8a7040",
-                        letterSpacing: 1,
+                        letterSpacing: 0.3,
                       }}
                     >
                       {policy.length > 180
@@ -226,12 +226,12 @@ export default function PolicyScreen({ setup, problems, voters, onComplete }) {
               </div>
               <div
                 style={{
-                  fontFamily: "'Special Elite',cursive",
+                  fontFamily: "var(--font-headline), serif",
                   fontSize: 9,
                   color: "#8a7040",
                   textAlign: "center",
                   marginTop: 10,
-                  letterSpacing: 2,
+                  letterSpacing: 0.3,
                 }}
               >
                 HINT: USE SPECIFIC WORDS & NUMBERS · TAILOR TO VOTER CONCERNS
@@ -245,10 +245,10 @@ export default function PolicyScreen({ setup, problems, voters, onComplete }) {
                 <div className="ink">
                   <div
                     style={{
-                      fontFamily: "'Special Elite',cursive",
+                      fontFamily: "var(--font-headline), serif",
                       fontSize: 10,
-                      letterSpacing: 4,
-                      textTransform: "uppercase",
+                      letterSpacing: 0.5,
+                      textTransform: "capitalize",
                     }}
                   >
                     Your Submitted Policy
@@ -263,9 +263,7 @@ export default function PolicyScreen({ setup, problems, voters, onComplete }) {
                   <div
                     className="body"
                     style={{
-                      fontStyle: roundResults[round]?.policy
-                        ? "normal"
-                        : "italic",
+                      fontStyle: "normal",
                       color: roundResults[round]?.policy
                         ? "#270e00"
                         : "#780e0e",
@@ -316,10 +314,10 @@ export default function PolicyScreen({ setup, problems, voters, onComplete }) {
                     <div className="ink">
                       <div
                         style={{
-                          fontFamily: "'Special Elite',cursive",
+                          fontFamily: "var(--font-headline), serif",
                           fontSize: 10,
-                          letterSpacing: 4,
-                          textTransform: "uppercase",
+                          letterSpacing: 0.5,
+                          textTransform: "capitalize",
                         }}
                       >
                         Public Response — Round {round + 1}
@@ -328,9 +326,9 @@ export default function PolicyScreen({ setup, problems, voters, onComplete }) {
                     <div style={{ padding: "14px" }}>
                       <div
                         style={{
-                          fontFamily: "'Special Elite',cursive",
+                          fontFamily: "var(--font-headline), serif",
                           fontSize: 10,
-                          letterSpacing: 6,
+                          letterSpacing: 0.3,
                           color: wc,
                           border: `2px solid ${wc}`,
                           display: "inline-block",
@@ -353,11 +351,11 @@ export default function PolicyScreen({ setup, problems, voters, onComplete }) {
                       </div>
                       <div
                         style={{
-                          fontFamily: "'Special Elite',cursive",
+                          fontFamily: "var(--font-headline), serif",
                           fontSize: 9,
                           color: "#694818",
-                          letterSpacing: 2,
-                          textTransform: "uppercase",
+                          letterSpacing: 0.3,
+                          textTransform: "capitalize",
                           marginTop: 4,
                         }}
                       >

@@ -36,11 +36,11 @@ export default function VoterCard({ voter, score, revealed, pending }) {
           </div>
           <div
             style={{
-              fontFamily: "'Special Elite',cursive",
+              fontFamily: "var(--font-headline), serif",
               fontSize: 9,
-              letterSpacing: 2,
+              letterSpacing: 0.3,
               color: "#694818",
-              textTransform: "uppercase",
+              textTransform: "capitalize",
             }}
           >
             {voter.role}
@@ -51,7 +51,6 @@ export default function VoterCard({ voter, score, revealed, pending }) {
                 fontFamily: "'Libre Baskerville',serif",
                 fontSize: 11,
                 color: "#694818",
-                fontStyle: "italic",
                 marginTop: 3,
               }}
             >
@@ -61,11 +60,11 @@ export default function VoterCard({ voter, score, revealed, pending }) {
           {pending && !revealed && (
             <div
               style={{
-                fontFamily: "'Special Elite',cursive",
+                fontFamily: "var(--font-headline), serif",
                 fontSize: 9,
                 color: "#987438",
                 marginTop: 4,
-                letterSpacing: 1,
+                letterSpacing: 0.3,
               }}
             >
               Awaiting policy…
@@ -75,11 +74,11 @@ export default function VoterCard({ voter, score, revealed, pending }) {
             <div style={{ marginTop: 4 }}>
               <div
                 style={{
-                  fontFamily: "'Special Elite',cursive",
+                  fontFamily: "var(--font-headline), serif",
                   fontSize: 9,
-                  letterSpacing: 2,
+                  letterSpacing: 0.3,
                   color: vc,
-                  textTransform: "uppercase",
+                  textTransform: "capitalize",
                 }}
               >
                 {verdict}
@@ -98,7 +97,7 @@ export default function VoterCard({ voter, score, revealed, pending }) {
                 ))}
                 <span
                   style={{
-                    fontFamily: "'Special Elite',cursive",
+                    fontFamily: "var(--font-headline), serif",
                     fontSize: 9,
                     color: "#694818",
                     marginLeft: 4,

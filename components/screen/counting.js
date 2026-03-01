@@ -109,10 +109,10 @@ export default function CountingScreen({
             <div className="ink">
               <div
                 style={{
-                  fontFamily: "'Special Elite',cursive",
+                  fontFamily: "var(--font-headline), serif",
                   fontSize: 10,
-                  letterSpacing: 4,
-                  textTransform: "uppercase",
+                  letterSpacing: 0.5,
+                  textTransform: "capitalize",
                 }}
               >
                 Ballot Count Progress
@@ -128,9 +128,9 @@ export default function CountingScreen({
               >
                 <span
                   style={{
-                    fontFamily: "'Special Elite',cursive",
+                    fontFamily: "var(--font-headline), serif",
                     fontSize: 10,
-                    letterSpacing: 2,
+                    letterSpacing: 0.3,
                     color: "#694818",
                   }}
                 >
@@ -154,12 +154,12 @@ export default function CountingScreen({
               </div>
               <div
                 style={{
-                  fontFamily: "'Special Elite',cursive",
+                  fontFamily: "var(--font-headline), serif",
                   fontSize: 9,
                   color: "#694818",
                   marginTop: 5,
-                  letterSpacing: 2,
-                  textTransform: "uppercase",
+                  letterSpacing: 0.3,
+                  textTransform: "capitalize",
                 }}
               >
                 {progress < 100 ? (
@@ -216,9 +216,9 @@ export default function CountingScreen({
                     style={{
                       width: 72,
                       textAlign: "right",
-                      fontFamily: "'Special Elite',cursive",
+                      fontFamily: "var(--font-headline), serif",
                       fontSize: 11,
-                      letterSpacing: 1,
+                      letterSpacing: 0.3,
                       flexShrink: 0,
                     }}
                   >
@@ -234,10 +234,10 @@ export default function CountingScreen({
             <div className="ink-blue">
               <div
                 style={{
-                  fontFamily: "'Special Elite',cursive",
+                  fontFamily: "var(--font-headline), serif",
                   fontSize: 10,
-                  letterSpacing: 4,
-                  textTransform: "uppercase",
+                  letterSpacing: 0.5,
+                  textTransform: "capitalize",
                 }}
               >
                 Policy Performance Summary
@@ -263,11 +263,11 @@ export default function CountingScreen({
                     <div style={{ flex: 1 }}>
                       <div
                         style={{
-                          fontFamily: "'Special Elite',cursive",
+                          fontFamily: "var(--font-headline), serif",
                           fontSize: 9,
-                          letterSpacing: 1,
+                          letterSpacing: 0.3,
                           color: "#694818",
-                          textTransform: "uppercase",
+                          textTransform: "capitalize",
                         }}
                       >
                         {r.problem.title}
@@ -329,11 +329,11 @@ export default function CountingScreen({
             >
               <span
                 style={{
-                  fontFamily: "'Special Elite',cursive",
+                  fontFamily: "var(--font-headline), serif",
                   fontSize: 9,
-                  letterSpacing: 2,
+                  letterSpacing: 0.3,
                   color: "#694818",
-                  textTransform: "uppercase",
+                  textTransform: "capitalize",
                 }}
               >
                 Overall Policy Rating

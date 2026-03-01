@@ -95,10 +95,10 @@ export default function NationalResultScreen({
             <div className="ink">
               <div
                 style={{
-                  fontFamily: "'Special Elite',cursive",
+                  fontFamily: "var(--font-headline), serif",
                   fontSize: 10,
-                  letterSpacing: 4,
-                  textTransform: "uppercase",
+                  letterSpacing: 0.5,
+                  textTransform: "capitalize",
                 }}
               >
                 {progress >= 100 ? "Final Seat Count" : "Live Seat Tally"} — 275
@@ -117,11 +117,11 @@ export default function NationalResultScreen({
             >
               <span
                 style={{
-                  fontFamily: "'Special Elite',cursive",
+                  fontFamily: "var(--font-headline), serif",
                   fontSize: 9,
-                  letterSpacing: 2,
+                  letterSpacing: 0.3,
                   color: "#0d2860",
-                  textTransform: "uppercase",
+                  textTransform: "capitalize",
                 }}
               >
                 Majority Mark
@@ -162,11 +162,11 @@ export default function NationalResultScreen({
                     </div>
                     <div
                       style={{
-                        fontFamily: "'Special Elite',cursive",
+                        fontFamily: "var(--font-headline), serif",
                         fontSize: 8,
-                        letterSpacing: 1,
+                        letterSpacing: 0.3,
                         color: "#694818",
-                        textTransform: "uppercase",
+                        textTransform: "capitalize",
                       }}
                     >
                       {isP ? "Your Party" : "Opposition"}
@@ -203,11 +203,11 @@ export default function NationalResultScreen({
             >
               <div
                 style={{
-                  fontFamily: "'Special Elite',cursive",
+                  fontFamily: "var(--font-headline), serif",
                   fontSize: 9,
-                  letterSpacing: 3,
+                  letterSpacing: 0.5,
                   color: "#694818",
-                  textTransform: "uppercase",
+                  textTransform: "capitalize",
                   marginBottom: 6,
                 }}
               >
@@ -261,7 +261,7 @@ export default function NationalResultScreen({
                     />
                     <div
                       style={{
-                        fontFamily: "'Special Elite',cursive",
+                        fontFamily: "var(--font-headline), serif",
                         fontSize: 9,
                         color: "#694818",
                       }}
@@ -280,10 +280,10 @@ export default function NationalResultScreen({
               <div className="ink">
                 <div
                   style={{
-                    fontFamily: "'Special Elite',cursive",
+                    fontFamily: "var(--font-headline), serif",
                     fontSize: 10,
-                    letterSpacing: 4,
-                    textTransform: "uppercase",
+                    letterSpacing: 0.5,
+                    textTransform: "capitalize",
                   }}
                 >
                   National Result Compilation
@@ -299,9 +299,9 @@ export default function NationalResultScreen({
                 >
                   <span
                     style={{
-                      fontFamily: "'Special Elite',cursive",
+                      fontFamily: "var(--font-headline), serif",
                       fontSize: 10,
-                      letterSpacing: 2,
+                      letterSpacing: 0.3,
                       color: "#694818",
                     }}
                   >
@@ -325,12 +325,12 @@ export default function NationalResultScreen({
                 </div>
                 <div
                   style={{
-                    fontFamily: "'Special Elite',cursive",
+                    fontFamily: "var(--font-headline), serif",
                     fontSize: 9,
                     color: "#694818",
                     marginTop: 5,
-                    letterSpacing: 2,
-                    textTransform: "uppercase",
+                    letterSpacing: 0.3,
+                    textTransform: "capitalize",
                   }}
                 >
                   <span>
@@ -366,10 +366,10 @@ export default function NationalResultScreen({
               />
               <div
                 style={{
-                  fontFamily: "'Special Elite',cursive",
+                  fontFamily: "var(--font-headline), serif",
                   fontSize: 9,
-                  letterSpacing: 5,
-                  textTransform: "uppercase",
+                  letterSpacing: 0.5,
+                  textTransform: "capitalize",
                   opacity: 0.7,
                   marginBottom: 6,
                 }}
@@ -417,10 +417,10 @@ export default function NationalResultScreen({
               <div className="ink-blue">
                 <div
                   style={{
-                    fontFamily: "'Special Elite',cursive",
+                    fontFamily: "var(--font-headline), serif",
                     fontSize: 10,
-                    letterSpacing: 4,
-                    textTransform: "uppercase",
+                    letterSpacing: 0.5,
+                    textTransform: "capitalize",
                   }}
                 >
                   Your Personal Report Card
@@ -458,11 +458,11 @@ export default function NationalResultScreen({
                   >
                     <span
                       style={{
-                        fontFamily: "'Special Elite',cursive",
+                        fontFamily: "var(--font-headline), serif",
                         fontSize: 10,
-                        letterSpacing: 2,
+                        letterSpacing: 0.3,
                         color: "#694818",
-                        textTransform: "uppercase",
+                        textTransform: "capitalize",
                       }}
                     >
                       {label}
@@ -494,12 +494,12 @@ export default function NationalResultScreen({
               <div
                 className="fade-in"
                 style={{
-                  fontFamily: "'Special Elite',cursive",
+                  fontFamily: "var(--font-headline), serif",
                   fontSize: 9,
                   color: "#8a7040",
                   textAlign: "center",
                   marginTop: 12,
-                  letterSpacing: 2,
+                  letterSpacing: 0.3,
                 }}
               >
                  ELECTION 2082 COVERAGE

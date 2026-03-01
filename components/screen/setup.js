@@ -79,11 +79,11 @@ export default function SetupScreen({ onStart }) {
                 </div>
                 <div
                   style={{
-                    fontFamily: "'Special Elite',cursive",
+                    fontFamily: "var(--font-headline), serif",
                     fontSize: 9,
-                    letterSpacing: 3,
+                    letterSpacing: 0.5,
                     color: "#694818",
-                    textTransform: "uppercase",
+                    textTransform: "capitalize",
                   }}
                 >
                   {l}
@@ -95,11 +95,11 @@ export default function SetupScreen({ onStart }) {
             <div>
               <div
                 style={{
-                  fontFamily: "'Special Elite',cursive",
+                  fontFamily: "var(--font-headline), serif",
                   fontSize: 10,
-                  letterSpacing: 4,
+                  letterSpacing: 0.5,
                   color: "#694818",
-                  textTransform: "uppercase",
+                  textTransform: "capitalize",
                   marginBottom: 8,
                 }}
               >
@@ -120,11 +120,11 @@ export default function SetupScreen({ onStart }) {
             <div>
               <div
                 style={{
-                  fontFamily: "'Special Elite',cursive",
+                  fontFamily: "var(--font-headline), serif",
                   fontSize: 10,
-                  letterSpacing: 4,
+                  letterSpacing: 0.5,
                   color: "#694818",
-                  textTransform: "uppercase",
+                  textTransform: "capitalize",
                   marginBottom: 8,
                 }}
               >
@@ -144,11 +144,11 @@ export default function SetupScreen({ onStart }) {
             <div>
               <div
                 style={{
-                  fontFamily: "'Special Elite',cursive",
+                  fontFamily: "var(--font-headline), serif",
                   fontSize: 10,
-                  letterSpacing: 4,
+                  letterSpacing: 0.5,
                   color: "#694818",
-                  textTransform: "uppercase",
+                  textTransform: "capitalize",
                   marginBottom: 8,
                 }}
               >
@@ -167,11 +167,11 @@ export default function SetupScreen({ onStart }) {
               {party && (
                 <div
                   style={{
-                    fontFamily: "'Special Elite',cursive",
+                    fontFamily: "var(--font-headline), serif",
                     fontSize: 10,
                     color: "#694818",
                     marginTop: 6,
-                    letterSpacing: 1,
+                    letterSpacing: 0.3,
                   }}
                 >
                   PM Candidate:{" "}
@@ -182,11 +182,11 @@ export default function SetupScreen({ onStart }) {
             <div>
               <div
                 style={{
-                  fontFamily: "'Special Elite',cursive",
+                  fontFamily: "var(--font-headline), serif",
                   fontSize: 10,
-                  letterSpacing: 4,
+                  letterSpacing: 0.5,
                   color: "#694818",
-                  textTransform: "uppercase",
+                  textTransform: "capitalize",
                   marginBottom: 8,
                 }}
               >
@@ -218,10 +218,10 @@ export default function SetupScreen({ onStart }) {
                   >
                     <div
                       style={{
-                        fontFamily: "'Special Elite',cursive",
+                        fontFamily: "var(--font-headline), serif",
                         fontSize: 11,
-                        letterSpacing: 2,
-                        textTransform: "uppercase",
+                        letterSpacing: 0.3,
+                        textTransform: "capitalize",
                         color: difficulty === d ? "#f3e8c8" : "#170d00",
                       }}
                     >
@@ -233,7 +233,7 @@ export default function SetupScreen({ onStart }) {
                         fontSize: 10,
                         color: difficulty === d ? "#c8a860" : "#694818",
                         marginTop: 2,
-                        fontStyle: "italic",
+
                       }}
                     >
                       {desc}
